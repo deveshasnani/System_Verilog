@@ -1,0 +1,50 @@
+bit [31:0] array1[bit [31:0]];
+bit [31:0] rand_add[bit [31:0]];
+
+task write(input bit[31:0] addr ,data );
+array1[addr]= data;
+  $display("[Write]");
+endtask
+
+task read( input bit[31:0] addr);
+$display("element at addr = %d is  = %d",addr,array1[addr]);
+  
+endtask
+module test; 
+initial 
+begin
+  
+  int tempadd,tempdata , index;
+for (int i =1 ; i <=10; i++)
+ begin
+ tempadd = $random;
+ tempdata = $random ;
+write(tempadd,tempdata);
+ rand_add[i] = tempadd;
+end
+
+for (int i = 1 ; i<=10 ; i++)
+begin
+read(rand_add[i]);
+end
+  
+// display all values 
+
+  if(array1.first(index))
+do
+$display("#2 element at index = %d is  = %d",index ,array1[index]);
+while(
+array1.next(index));  
+
+  
+  //first index of array
+  array1.first(index);
+  $display("first index = %d",index);
+  $display("first element = %d",array1[index]);
+  
+  // last index and element
+  array1.last(index);
+  $display("last index = %d",index);
+  $display("last element = %d",array1[index]);
+  end 
+endmodule
