@@ -1,0 +1,27 @@
+module test;
+class alu_trans_c;
+ typedef enum {LOGIC,ARITH,SHIFT} OPERATION ;
+  rand logic [3:0] alu_sel_in;
+  rand OPERATION rand_oper;
+  
+  constraint cons1 {if(rand_oper==LOGIC) alu_sel_in inside {0,1,2,3,4,5};}
+  constraint cons2 {if(rand_oper==ARITH) alu_sel_in inside {[6:9]};}
+  constraint cons3 {if(rand_oper==SHIFT) alu_sel_in inside {[10:15]};}
+  
+  function void post_randomize();
+    $display("OPERATION = %c  aluselin= %d",rand_oper.name,alu_sel_in);
+  endfunction
+
+endclass
+
+  initial
+    begin
+    alu_trans_c obj =new;
+      for(int i = 1;i<=10;i++)
+        begin
+          if(obj.randomize());
+          else $display("failed randomization");
+        end
+    end
+  
+endmodule
