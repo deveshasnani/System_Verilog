@@ -1,0 +1,154 @@
+[2021-02-14 13:24:46 EST] vlib work && vlog -writetoplevels questa.tops '-timescale' '1ns/1ns' design.sv testbench.sv  && vsim -f questa.tops -batch -do "vsim -voptargs=+acc=npr; run -all; exit" -voptargs=+acc=npr 
+QuestaSim-64 vlog 2020.1_1 Compiler 2020.03 Mar  4 2020
+Start time: 13:24:46 on Feb 14,2021
+vlog -writetoplevels questa.tops -timescale 1ns/1ns design.sv testbench.sv 
+-- Compiling module ram_test
+
+Top level modules:
+	ram_test
+End time: 13:24:46 on Feb 14,2021, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+# vsim ram_test -batch -do "vsim -voptargs=+acc=npr; run -all; exit" -voptargs="+acc=npr" 
+# Start time: 13:24:46 on Feb 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2020.1_1 linux_x86_64 Mar  4 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ram_test(fast)
+# 
+# vsim -voptargs=+acc=npr
+# run -all
+# packet display called
+# 
+#  data =            454129852 
+#  rd_add = 3058 
+#  wr_add = 2440
+#  read = 1 
+#  write = 1 
+#  transID =           1 
+#  no_of_read_trans =           0 
+#  no_of_write_trans=           0 
+#  no_of_RW_trans=           1 
+#  dataout = 13900634752064013917 
+# packet display called
+# 
+#  data =           2336549989 
+#  rd_add = 1421 
+#  wr_add =  678
+#  read = 0 
+#  write = 1 
+#  transID =           2 
+#  no_of_read_trans =           0 
+#  no_of_write_trans=           1 
+#  no_of_RW_trans=           1 
+#  dataout = 15835284993812460311 
+# packet display called
+# 
+#  data =            211839255 
+#  rd_add =   98 
+#  wr_add = 3338
+#  read = 1 
+#  write = 0 
+#  transID =           3 
+#  no_of_read_trans =           1 
+#  no_of_write_trans=           1 
+#  no_of_RW_trans=           1 
+#  dataout = 11621152070066256754 
+# packet display called
+# 
+#  data =           2147571871 
+#  rd_add = 3532 
+#  wr_add = 2939
+#  read = 1 
+#  write = 1 
+#  transID =           4 
+#  no_of_read_trans =           1 
+#  no_of_write_trans=           1 
+#  no_of_RW_trans=           2 
+#  dataout =  5836973311988228158 
+# packet display called
+# 
+#  data =           3722680093 
+#  rd_add = 2607 
+#  wr_add =  900
+#  read = 1 
+#  write = 1 
+#  transID =           5 
+#  no_of_read_trans =           1 
+#  no_of_write_trans=           1 
+#  no_of_RW_trans=           3 
+#  dataout =  5264465085231822627 
+# packet display called
+# 
+#  data =           3547146486 
+#  rd_add = 1934 
+#  wr_add =  208
+#  read = 1 
+#  write = 0 
+#  transID =           6 
+#  no_of_read_trans =           2 
+#  no_of_write_trans=           1 
+#  no_of_RW_trans=           3 
+#  dataout =  2071281512200350325 
+# packet display called
+# 
+#  data =           2948502480 
+#  rd_add = 3532 
+#  wr_add =  221
+#  read = 0 
+#  write = 1 
+#  transID =           7 
+#  no_of_read_trans =           2 
+#  no_of_write_trans=           2 
+#  no_of_RW_trans=           3 
+#  dataout =  5302150457792568671 
+# packet display called
+# 
+#  data =           2962546053 
+#  rd_add = 3661 
+#  wr_add = 2804
+#  read = 1 
+#  write = 1 
+#  transID =           8 
+#  no_of_read_trans =           2 
+#  no_of_write_trans=           2 
+#  no_of_RW_trans=           4 
+#  dataout =  8776742645120431569 
+# packet display called
+# 
+#  data =           3231923896 
+#  rd_add = 2438 
+#  wr_add = 2397
+#  read = 1 
+#  write = 1 
+#  transID =           9 
+#  no_of_read_trans =           2 
+#  no_of_write_trans=           2 
+#  no_of_RW_trans=           5 
+#  dataout = 16402882716716327288 
+# packet display called
+# 
+#  data =           3155667982 
+#  rd_add = 4085 
+#  wr_add =  549
+#  read = 0 
+#  write = 1 
+#  transID =          10 
+#  no_of_read_trans =           2 
+#  no_of_write_trans=           3 
+#  no_of_RW_trans=           5 
+#  dataout = 13184507873827534641 
+# ////////////////////// array Display ///////////////
+# exit
