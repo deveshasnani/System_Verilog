@@ -1,0 +1,90 @@
+Riviera-PRO 2020.04.130.7729(Linux64) 2021-03-22 08:10:02
+
+Elaboration top modules:
+Verilog Module                top
+SystemVerilog Class           Environment
+SystemVerilog Package         UnitScopePackage_1
+SystemVerilog Class           small_packet
+SystemVerilog Class           *base_class
+SystemVerilog Class           Driver
+SystemVerilog Class           Receiver
+SystemVerilog Class           Scoreboard
+SystemVerilog Class           \std::mailbox#(singular) \
+SystemVerilog Class           packet
+SystemVerilog Class           \*dynarray#([]bitS) \
+SystemVerilog Class           \*dynarray#([]logic) \
+SystemVerilog Class           coverage
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Verilog Module                                                   | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+top                                                              | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+switch                                                           | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\mem_interface.MEM.cb \                                          | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\input_interface.IP.cb \                                         | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\output_interface.OP.cb \                                        | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Package                                            | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+UnitScopePackage_1                                               | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Interface                                          | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+mem_interface                                                    | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+input_interface                                                  | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+output_interface                                                 | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Class                                              | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+Environment                                                      | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+small_packet                                                     | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+*base_class                                                      | vl      |      | 2020.04.130 (Linux64) | <unavailable>
+Driver                                                           | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+Receiver                                                         | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+Scoreboard                                                       | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\std::mailbox#(singular) \                                       | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+packet                                                           | work    | SVA  | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\*dynarray#([]bitS) \                                            | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\*dynarray#([]logic) \                                           | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+coverage                                                         | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage covergroup::switch_coverage \                          | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage::covergroup::switch_coverage coverpoint::length \      | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage::covergroup::switch_coverage coverpoint::da \          | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage::covergroup::switch_coverage coverpoint::length_kind \ | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage::covergroup::switch_coverage coverpoint::fcs_kind \    | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\coverage::covergroup::switch_coverage cross::all_cross \        | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Modport                                            | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+\mem_interface \\mem_interface.MEM \\ \                          | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\input_interface \\input_interface.IP \\ \                       | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+\output_interface \\output_interface.OP \\ \                     | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Program                                            | Library | Info | Compiler Version      | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------
+testcase                                                         | work    |      | 2020.04.130 (Linux64) | -timescale 1ns/1ns
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
+Library                                                          | Comment
+--------------------------------------------------------------------------------------------------------------------------------
+vl                                                               | Standard Verilog library
+work                                                             | None
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim top +access+r -dbg
+
+
+The performance of simulation is reduced. Version EDU Edition

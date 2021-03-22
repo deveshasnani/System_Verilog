@@ -1,0 +1,121 @@
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++       REPORT INFO       ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SUMMARY
+===================================================
+|     Property     |            Value             |
+===================================================
+| User             | runner                       |
+| Host             | b24c5fb2dab2                 |
+| Tool             | Riviera-PRO 2020.04          |
+| Report file      | /home/runner/acdb_report.txt |
+| Report date      | 2021-03-22 08:10             |
+| Report arguments |                              |
+| Input file       | simulation session           |
+| Input file date  | simulation session           |
+| Number of tests  | 1                            |
+===================================================
+
+
+TEST DETAILS
+==============================================
+| Property |              Value              |
+==============================================
+| Test     | fcover.acdb:fcover              |
+| Status   | Ok                              |
+| Args     | asim top +access+r -dbg         |
+| Simtime  | 147150 ns                       |
+| Cputime  | 2.266 s                         |
+| Seed     | 1                               |
+| Date     | 2021-03-22 08:10                |
+| User     | runner                          |
+| Host     | b24c5fb2dab2                    |
+| Host os  | Linux64                         |
+| Tool     | Riviera-PRO 2020.04 (simulator) |
+==============================================
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++     DESIGN HIERARCHY    ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+CUMULATIVE SUMMARY
+=============================================
+|    Coverage Type    | Weight | Hits/Total |
+=============================================
+| Covergroup Coverage |      1 |    25.332% |
+|---------------------|--------|------------|
+| Types               |        |      0 / 1 |
+=============================================
+CUMULATIVE INSTANCE-BASED COVERAGE: 25.332%
+COVERED INSTANCES: 0 / 1
+FILES: 1
+
+
+CLASS - /coverage : work.coverage
+
+
+    SUMMARY
+    =============================================
+    |    Coverage Type    | Weight | Hits/Total |
+    =============================================
+    | Covergroup Coverage |      1 |    25.332% |
+    |---------------------|--------|------------|
+    | Types               |        |      0 / 1 |
+    =============================================
+    WEIGHTED AVERAGE LOCAL: 25.332%
+
+
+    COVERGROUP COVERAGE
+    ===================================================================
+    |           Covergroup           |  Hits   |  Goal /  |  Status   |
+    |                                |         | At Least |           |
+    ===================================================================
+    | TYPE /coverage/switch_coverage | 25.332% | 100.000% | Uncovered |
+    ===================================================================
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++       DESIGN UNITS      ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+CUMULATIVE SUMMARY
+=============================================
+|    Coverage Type    | Weight | Hits/Total |
+=============================================
+| Covergroup Coverage |      1 |    25.332% |
+|---------------------|--------|------------|
+| Types               |        |      0 / 1 |
+=============================================
+CUMULATIVE DESIGN-BASED COVERAGE: 25.332%
+COVERED DESIGN UNITS: 0 / 1
+FILES: 1
+
+
+CLASS - work.coverage
+
+
+    SUMMARY
+    =============================================
+    |    Coverage Type    | Weight | Hits/Total |
+    =============================================
+    | Covergroup Coverage |      1 |    25.332% |
+    |---------------------|--------|------------|
+    | Types               |        |      0 / 1 |
+    =============================================
+    WEIGHTED AVERAGE: 25.332%
+
+
+    COVERGROUP COVERAGE
+    ===================================================================
+    |           Covergroup           |  Hits   |  Goal /  |  Status   |
+    |                                |         | At Least |           |
+    ===================================================================
+    | TYPE /coverage/switch_coverage | 25.332% | 100.000% | Uncovered |
+    ===================================================================
+
+

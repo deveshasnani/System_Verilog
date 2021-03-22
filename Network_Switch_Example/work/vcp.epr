@@ -1,0 +1,13 @@
+"../testbench.sv"	1
+"../coverage.sv"	1
+"../scoreboard.sv"	2
+"../rtl.sv"	1
+"../testcase.sv"	1
+"../interface.sv"	1
+"../top.sv"	1
+"../Environment.sv"	2
+"../globals.sv"	1
+"../design.sv"	1
+"../driver.sv"	2
+"../packet.sv"	1
+"../receiver.sv"	2
