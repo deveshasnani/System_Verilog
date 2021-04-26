@@ -24,7 +24,5 @@ program testcase(msintf intf);
   #20
       $finish();
     end
-    // Assertions
-  
-  //
+    
 endprogram
