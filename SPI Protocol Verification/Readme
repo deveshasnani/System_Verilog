@@ -3,3 +3,4 @@ CONTENTS-
 HDL description of master and slave devices written in verilog.
 Verification done using Systeverilog.
 verified different modes of operation and pin level signalling using assertions.
+link - https://www.edaplayground.com/x/c8js
