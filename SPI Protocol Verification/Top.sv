@@ -34,4 +34,40 @@ logic clk = 0;
             .SS(SS),
             .data(intf.slavein) );
   assign intf.slaveout = s1.shiftreg;
+  
+   /// assertions
+  int errcount=0;
+   logic [1:0] m03,m12;
+  always @(negedge SCLK , negedge SS) #1 m03 = {MOSI,MISO};
+  always @(posedge SCLK , negedge SS) #1 m12 = {MOSI,MISO};
+  
+      
+   
+    property p1;
+       disable iff (intf.mode==0 || intf.mode==3)
+     @(negedge SCLK) SS==0 && {MOSI,MISO}==m12;
+    endproperty
+   
+   property p2;
+     disable iff (intf.mode==1 || intf.mode==2)
+     @(posedge SCLK) SS==0 && {MOSI,MISO}==m03;
+    endproperty
+ 
+   assert property(p1 ) else 
+      	 begin
+                if(errcount<=0) errcount++ ;
+       			 else begin
+        		 errcount++;
+        		 $error("Assertion Fail");
+      	 end
+     end
+     
+     assert property(p2) else 
+      	 begin
+                if(errcount<=0) errcount++ ;
+       			 else begin
+        		 errcount++;
+        		 $error("Assertion Fail");
+      	 end
+     end
 endmodule
