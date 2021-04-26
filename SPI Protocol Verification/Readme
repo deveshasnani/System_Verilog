@@ -1,0 +1,5 @@
+As part of learning protocols, I took SPI protocol to implement and verify using SystemVerilog as it is easy to start with.
+CONTENTS-
+HDL description of master and slave devices written in verilog.
+Verification done using Systeverilog.
+verified different modes of operation and pin level signalling using assertions.
