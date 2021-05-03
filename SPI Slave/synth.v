@@ -2,6 +2,35 @@
 
 (* src = "design.sv:2" *)
 module spi_slave(SCLK, MOSI, SS, din, mode, MISO);
+  wire _00_;
+  wire _01_;
+  wire _02_;
+  wire _03_;
+  wire _04_;
+  wire _05_;
+  wire _06_;
+  wire _07_;
+  wire _08_;
+  wire _09_;
+  wire _10_;
+  wire _11_;
+  wire _12_;
+  wire _13_;
+  wire _14_;
+  wire _15_;
+  wire _16_;
+  wire _17_;
+  wire _18_;
+  wire _19_;
+  wire _20_;
+  wire _21_;
+  wire _22_;
+  wire _23_;
+  wire _24_;
+  wire _25_;
+  wire _26_;
+  wire _27_;
+  wire _28_;
   (* src = "design.sv:6" *)
   output MISO;
   (* src = "design.sv:3" *)
@@ -10,42 +39,6 @@ module spi_slave(SCLK, MOSI, SS, din, mode, MISO);
   input SCLK;
   (* src = "design.sv:3" *)
   input SS;
-  (* src = "design.sv:5" *)
-  wire _00_;
-  (* src = "design.sv:6" *)
-  wire _01_;
-  (* src = "design.sv:7" *)
-  wire _02_;
-  (* src = "design.sv:8" *)
-  wire _03_;
-  (* src = "design.sv:9" *)
-  wire _04_;
-  (* src = "design.sv:10" *)
-  wire _05_;
-  (* src = "design.sv:11" *)
-  wire _06_;
-  (* src = "design.sv:12" *)
-  wire _07_;
-  (* src = "design.sv:13" *)
-  wire _08_;
-  (* src = "design.sv:14" *)
-  wire _09_;
-  (* src = "design.sv:15" *)
-  wire _10_;
-  (* src = "design.sv:16" *)
-  wire _11_;
-  (* src = "design.sv:17" *)
-  wire _12_;
-  (* src = "design.sv:18" *)
-  wire _13_;
-  (* src = "design.sv:19" *)
-  wire _14_;
-  (* src = "design.sv:20" *)
-  wire _15_;
-  (* src = "design.sv:21" *)
-  wire _16_;
-  (* src = "design.sv:22" *)
-  wire _17_;
   (* src = "design.sv:4" *)
   input [7:0] din;
   (* src = "design.sv:8" *)
@@ -54,33 +47,44 @@ module spi_slave(SCLK, MOSI, SS, din, mode, MISO);
   reg misoreg;
   (* src = "design.sv:5" *)
   input [1:0] mode;
-  assign _03_ = _01_ & (* src = "design.sv:18" *) mode[0];
-  assign _04_ = _01_ & (* src = "design.sv:18" *) _03_;
-  assign _12_ = _01_ & (* src = "design.sv:18" *) _04_;
-  assign _06_ = _01_ & (* src = "design.sv:18" *) _05_;
-  assign _13_ = _01_ & (* src = "design.sv:18" *) _06_;
-  assign _08_ = SCLK & (* src = "design.sv:18" *) _07_;
-  assign _14_ = SCLK & (* src = "design.sv:18" *) _08_;
-  assign _15_ = _01_ & (* src = "design.sv:18" *) _07_;
-  assign _16_ = _01_ & (* src = "design.sv:18" *) _10_;
-  assign _17_ = SCLK & (* src = "design.sv:18" *) mode[0];
-  always @*
-    if (_00_)
-      misoreg = memory[0];
-  assign _00_ = ~ _09_;
+  assign _01_ = ~ (* src = "design.sv:18" *) SCLK;
+  assign _03_ = ~ (* src = "design.sv:18" *) _20_;
+  assign _04_ = ~ (* src = "design.sv:18" *) _19_;
+  assign _05_ = ~ (* src = "design.sv:18" *) _24_;
+  assign _06_ = ~ (* src = "design.sv:18" *) _23_;
+  assign _07_ = | (* src = "design.sv:18" *) { _27_, _28_ };
+  assign _08_ = | (* src = "design.sv:18" *) { _19_, _20_ };
+  assign _11_ = | (* src = "design.sv:18" *) { SCLK, _21_ };
+  assign _13_ = | (* src = "design.sv:18" *) { _23_, _24_ };
+  assign _15_ = | (* src = "design.sv:18" *) { _22_, _25_ };
+  assign _17_ = | (* src = "design.sv:18" *) { SCLK, _26_ };
+  assign _09_ = _01_ & (* src = "design.sv:18" *) _08_;
+  assign _10_ = _01_ & (* src = "design.sv:18" *) _09_;
+  assign _21_ = _01_ & (* src = "design.sv:18" *) _10_;
+  assign _12_ = _01_ & (* src = "design.sv:18" *) _11_;
+  assign _22_ = _01_ & (* src = "design.sv:18" *) _12_;
+  assign _14_ = SCLK & (* src = "design.sv:18" *) _13_;
+  assign _25_ = SCLK & (* src = "design.sv:18" *) _14_;
+  assign _16_ = _03_ & (* src = "design.sv:18" *) _04_;
+  assign _26_ = _01_ & (* src = "design.sv:18" *) _16_;
+  assign _27_ = _01_ & (* src = "design.sv:18" *) _17_;
+  assign _18_ = _05_ & (* src = "design.sv:18" *) _06_;
+  assign _28_ = SCLK & (* src = "design.sv:18" *) _18_;
   always @*
     if (_02_)
+      misoreg = memory[0];
+  assign _02_ = ~ _15_;
+  always @*
+    if (_00_)
       memory = { MOSI, memory[7:1] };
-  assign _02_ = ~ _11_;
-  assign _01_ = ~ (* src = "design.sv:18" *) SCLK;
-  assign _07_ = ~ (* src = "design.sv:26" *) mode[0];
-  always @(negedge SS)
-      misoreg <= din[0];
+  assign _00_ = ~ _07_;
   always @(negedge SS)
       memory <= din;
-  assign _05_ = | (* src = "design.sv:18" *) { _12_, SCLK };
-  assign _09_ = | (* src = "design.sv:18" *) { _13_, _14_ };
-  assign _10_ = | (* src = "design.sv:18" *) { _15_, SCLK };
-  assign _11_ = | (* src = "design.sv:18" *) { _16_, _17_ };
+  always @(negedge SS)
+      misoreg <= din[0];
+  assign _19_ = mode == (* full_case = 32'd1 *) (* src = "design.sv:37|design.sv:34" *) 2'h1;
+  assign _20_ = mode == (* full_case = 32'd1 *) (* src = "design.sv:36|design.sv:34" *) 2'h2;
+  assign _23_ = mode == (* full_case = 32'd1 *) (* src = "design.sv:25|design.sv:21" *) 2'h3;
+  assign _24_ = ! (* full_case = 32'd1 *) (* src = "design.sv:22|design.sv:21" *) mode;
   assign MISO = SS ? (* src = "design.sv:10" *) 1'hz : misoreg;
 endmodule
