@@ -4,3 +4,7 @@ HDL description of master and slave devices written in verilog.
 Verification done using Systeverilog.
 verified different modes of operation and pin level signalling using assertions.
 link - https://www.edaplayground.com/x/c8js
+
+as this was my first attempt master slave modules later turned out to be not synthesizable. 
+After this i corrected both codes and made them synthesizable.
+Post Synthesis verification can be found here - https://www.edaplayground.com/x/9Lty
