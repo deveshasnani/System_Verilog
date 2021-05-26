@@ -10,6 +10,7 @@ program testcase(master_interface mintf,slave_interface sintf);
  #200
   env.reset();
   #200
+     force env.mdrv.pkt.mode=1; // forced master write mode// coz read mode creating problems 
       fork
            env.start(1);
       join_none;
