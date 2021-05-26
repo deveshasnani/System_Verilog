@@ -1,3 +1,6 @@
 this project implements I2c Master device in verilog.
 ----------------------------------------------------
 link - https://www.edaplayground.com/x/eyJp
+
+update(26/5/21) -- currently master is not working in read mode properly
+i will correct its working in a short while. (detected this fault white verifying master and slave device communication unsin SV TB)
