@@ -23,7 +23,7 @@ class master_driver;
     @ (negedge intf.clk) intf.start = 1;  
     repeat(8) @(posedge intf.clk);
     
-    for(int x = no_of_bytes;x>=0;x++) begin
+    for(int x = no_of_bytes;x>=0;x--) begin
       if(intf.mode == 1) begin
         pkt.data = $random;
         intf.din = pkt.data;
