@@ -66,7 +66,7 @@ input clk,rd_wr,start,stop,reset,
         state = S3;
         
         
-        if(mode != receiver_mode) sda = tx_reg[~count] ;
+        if(mode != receiver_mode || phase == address_phase) sda = tx_reg[~count] ;
         count = count + 1'b1 ;
         //sender sets bit //set sda after scl falls (in write mode) 
         
