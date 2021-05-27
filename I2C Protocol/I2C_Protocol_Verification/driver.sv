@@ -21,24 +21,28 @@ class master_driver;
     intf.address = pkt.address;
     intf.mode = pkt.mode;
     @ (negedge intf.clk) intf.start = 1;  
-    repeat(8) @(posedge intf.clk);
+    repeat(18) @(posedge intf.clk);
     
     for(int x = no_of_bytes;x>=0;x--) begin
       if(intf.mode == 1) begin
         pkt.data = $random;
         intf.din = pkt.data;
-        drv2sb.put(pkt);
+        
+         
         	if(x == 0) intf.stop = 1;
         else intf.stop = 0;
-        repeat (8)  @(negedge intf.clk);
+        repeat (18)  @(negedge intf.clk);
+        $display("Master sample  data = %h   %t",pkt.data,$time);
+        drv2sb.put(pkt);
       end
       
       if(intf.mode == 0) begin
         if(x == 0) intf.stop = 1;
         else intf.stop = 0;
-        repeat (8)  @ (negedge intf.clk);
+        repeat (18)  @ (negedge intf.clk);
          pkt.data = intf.dout;
         drv2sb.put(pkt);
+        $display("Master sample  data = %h   %t",pkt.data,$time);
       end
       
     end
@@ -68,20 +72,23 @@ virtual  slave_interface intf;
     $display("DRIVER START Slave");
     intf.address = pkt.address;
     intf.din = pkt.data;
-    repeat (8) @(posedge intf.clk);
+    
+    repeat (22) @(posedge intf.clk);
     
     repeat(no_of_bytes) begin
       if(pkt.mode == 1) begin //receiver mode
-        repeat(8) @(negedge intf.clk);
+        repeat(18) @(negedge intf.clk);
         pkt.data = intf.dout;
         drv2sb.put(pkt);
+        $display("Slave sample  data = %h   %t",pkt.data,$time);
       end
       
       if (pkt.mode == 0) begin
        pkt.data = $random;
         intf.din = pkt.data;
         drv2sb.put(pkt);
-         repeat(8) @(negedge intf.clk);
+        $display("Slave sample  data = %h   %t",pkt.data,$time);
+        repeat(18) @(negedge intf.clk);
       end
     end
             
