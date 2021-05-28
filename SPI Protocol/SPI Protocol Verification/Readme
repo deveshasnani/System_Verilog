@@ -1,0 +1,11 @@
+As part of learning protocols, I took SPI protocol to implement and verify using SystemVerilog as it is easy to start with.
+CONTENTS-
+HDL description of master and slave devices written in verilog.
+Verification done using Systeverilog.
+verified different modes of operation and pin level signalling using assertions.
+link - https://www.edaplayground.com/x/c8js
+
+as this was my first attempt master slave modules later turned out to be not synthesizable. 
+After this i corrected both codes and made them synthesizable.
+Post Synthesis verification can be found under Post Synthesis folder 
+link - https://www.edaplayground.com/x/9Lty
