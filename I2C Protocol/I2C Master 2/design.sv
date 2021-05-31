@@ -114,14 +114,16 @@ input clk,rd_wr,start,stop,reset,
         
         scl = 1; //posedge scl
         count = count +1;
-        state = S6;
+        if(count == 0)state = S4;
+        else state = S6;
         
       end
       
       S8 : begin
         scl = 0; // negedge scl
+        sda=1;/////edited	
         if(stop == 1)begin
-          		state = S13;
+          	state = S13;
           		sda = 0;
         	end
         else state = S9;
