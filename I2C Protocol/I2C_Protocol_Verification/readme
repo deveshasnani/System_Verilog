@@ -1,0 +1,5 @@
+this project is an SV Testbench to verify I2C Protocol.
+for now I wrote a simple testcase to see if the environment works well.
+I will write assertions and more complex testcasesin future
+
+Link - https://www.edaplayground.com/x/rSCn
